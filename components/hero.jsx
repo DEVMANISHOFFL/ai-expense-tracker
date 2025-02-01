@@ -1,13 +1,13 @@
 "use client";
 
 import Link from 'next/link';
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Button } from './ui/button';
 import Image from 'next/image';
 
 const HeroSection = () => {
 
-    const imageRef = iseRef();
+    const imageRef = useRef();
 
     useEffect(() => {
         const imageElement = imageRef.current;
@@ -24,7 +24,7 @@ const HeroSection = () => {
         }
 
         window.addEventListener("scroll", handleScroll)
-        return () =>  w
+        return () =>  window.removeEventListener("scroll", handleScroll);
     }, [])
 
     return (
