@@ -3,7 +3,9 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <SignIn />
+    <div className='mt-32'>
+      <SignIn  />
+    </div>
   )
 }
 
